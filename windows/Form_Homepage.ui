@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_Homepage</class>
+ <widget class="QWidget" name="Form_Homepage">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1184</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>帆式文件管理器</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>261</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>选中一个文件并添加</string>
+      </property>
+      <property name="buddy">
+       <cstring>pushButton_addFile</cstring>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_addFile">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>添加单个项目</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>选中多个文件批次添加</string>
+      </property>
+      <property name="buddy">
+       <cstring>pushButton_addFiles</cstring>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_addFiles">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>添加多个项目</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>在 FFM 执行项目管理操作时，请避免</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>手动对项目库中的文件进行操作。</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>421</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>帆式文件管理器 | Fan File Manager</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>80</y>
+     <width>721</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>项目文件</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>项目标签</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>添加时间</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>哈希（sha1）</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>30</y>
+     <width>411</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_search">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>30</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>项目查找</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>609</y>
+     <width>271</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_about">
+      <property name="text">
+       <string>关于本程序</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_wiki">
+      <property name="text">
+       <string>程序 wiki</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButton_setting">
+      <property name="text">
+       <string>偏好设置</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Update">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>30</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>刷新项目库</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_index">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>261</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>标签集</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>格式集</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>80</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>编辑</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>140</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>190</y>
+     <width>171</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>文件操作</string>
+   </property>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>复制到...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>移动到...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>170</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>压缩为...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>220</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>重命名...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>列入选择框</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>270</y>
+      <width>171</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

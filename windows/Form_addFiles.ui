@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_addFiles</class>
+ <widget class="QWidget" name="Form_addFiles">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>568</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>添加多个项目 | 帆式文件管理器</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>551</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>项目名称</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>标签（需要编辑</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>哈希（sha1）</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>项目路径</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>511</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>在下方表格中编辑每一个项目的标签，然后选择 确认添加 以进行操作。</string>
+   </property>
+   <property name="buddy">
+    <cstring>tableWidget</cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>420</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>选中项目数 |</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_count">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>420</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>未指定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>410</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消添加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_confirm">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>410</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认添加</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

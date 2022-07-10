@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_addFile</class>
+ <widget class="QWidget" name="Form_addFile">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>632</width>
+    <height>233</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>添加单个项目 | 帆式文件管理器</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>611</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>项目路径 |</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_name"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_fileName">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>511</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>未指定</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>611</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>项目标签 |</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_tags"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>130</y>
+     <width>511</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>多个标签之间使用半角逗号（,）分隔，即英文逗号，也可以不添加标签</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加时间 |</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>文件哈希 |</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_time">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>170</y>
+     <width>391</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>计算中</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_sha1">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>190</y>
+     <width>391</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>计算中</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_confirm">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>160</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认添加</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancel">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>190</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消添加</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
