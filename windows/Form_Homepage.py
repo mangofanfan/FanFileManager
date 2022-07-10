@@ -55,10 +55,10 @@ class Ui_Form_Homepage(object):
 
         self.verticalLayout.addWidget(self.label_4)
 
-        self.pushButton_addAllInDire = QPushButton(self.verticalLayoutWidget)
-        self.pushButton_addAllInDire.setObjectName(u"pushButton_addAllInDire")
+        self.label_5 = QLabel(self.verticalLayoutWidget)
+        self.label_5.setObjectName(u"label_5")
 
-        self.verticalLayout.addWidget(self.pushButton_addAllInDire)
+        self.verticalLayout.addWidget(self.label_5)
 
         self.label = QLabel(Form_Homepage)
         self.label.setObjectName(u"label")
@@ -158,7 +158,6 @@ class Ui_Form_Homepage(object):
 #if QT_CONFIG(shortcut)
         self.label_2.setBuddy(self.pushButton_addFile)
         self.label_3.setBuddy(self.pushButton_addFiles)
-        self.label_4.setBuddy(self.pushButton_addAllInDire)
 #endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(Form_Homepage)
@@ -172,8 +171,8 @@ class Ui_Form_Homepage(object):
         self.pushButton_addFile.setText(QCoreApplication.translate("Form_Homepage", u"\u6dfb\u52a0\u5355\u4e2a\u9879\u76ee", None))
         self.label_3.setText(QCoreApplication.translate("Form_Homepage", u"\u9009\u4e2d\u591a\u4e2a\u6587\u4ef6\u6279\u6b21\u6dfb\u52a0", None))
         self.pushButton_addFiles.setText(QCoreApplication.translate("Form_Homepage", u"\u6dfb\u52a0\u591a\u4e2a\u9879\u76ee", None))
-        self.label_4.setText(QCoreApplication.translate("Form_Homepage", u"\u9009\u4e2d\u6587\u4ef6\u5939\u5185\u7684\u6240\u6709\u6587\u4ef6\u6dfb\u52a0", None))
-        self.pushButton_addAllInDire.setText(QCoreApplication.translate("Form_Homepage", u"\u6dfb\u52a0\u6587\u4ef6\u5939\u5185\u7684\u6587\u4ef6", None))
+        self.label_4.setText(QCoreApplication.translate("Form_Homepage", u"\u5728 FFM \u6267\u884c\u9879\u76ee\u7ba1\u7406\u64cd\u4f5c\u65f6\uff0c\u8bf7\u907f\u514d", None))
+        self.label_5.setText(QCoreApplication.translate("Form_Homepage", u"\u624b\u52a8\u5bf9\u9879\u76ee\u5e93\u4e2d\u7684\u6587\u4ef6\u8fdb\u884c\u64cd\u4f5c\u3002", None))
         self.label.setText(QCoreApplication.translate("Form_Homepage", u"\u5e06\u5f0f\u6587\u4ef6\u7ba1\u7406\u5668 | Fan File Manager", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form_Homepage", u"\u9879\u76ee\u6587\u4ef6", None));

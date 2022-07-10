@@ -3,3 +3,4 @@
 data_log_path = "FanStyle\\FanFileManager\\latest.log"
 data_setting_json = "FanStyle\\FanFileManager\\setting.json"
 data_files_json = "FanStyle\\FanFileManager\\files.json"
+data_window_icon = "FanStyle\\FanFileManager\\resources\\FFM logo.png"

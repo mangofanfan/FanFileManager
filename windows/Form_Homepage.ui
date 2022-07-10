@@ -76,17 +76,14 @@
     <item>
      <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>选中文件夹内的所有文件添加</string>
-      </property>
-      <property name="buddy">
-       <cstring>pushButton_addAllInDire</cstring>
+       <string>在 FFM 执行项目管理操作时，请避免</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_addAllInDire">
+     <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>添加文件夹内的文件</string>
+       <string>手动对项目库中的文件进行操作。</string>
       </property>
      </widget>
     </item>

@@ -50,8 +50,7 @@ class DataManager:
         self.description: str = self.json_read["description"]
 
         if "data" not in self.json_read:
-            self.json_read[
-                "data"] = '[{"name": "path","tags": ["tag1", "tag2", "tag3"],"time": "xxxx-xx-xx xx:xx:xx","sha1": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx（不知道有多少个 忘记了 反正好多好多 bushi"}]'
+            self.json_read["data"] = self.normal_data
         self.data: list[dict[str or list]] = self.json_read["data"]
 
         # 排查格式有误的项目，并对格式正确的项目编制索引
@@ -171,7 +170,7 @@ class DataManager:
                     self.type_index["视频影片"].append(data)
                 except Exception:
                     self.type_index["视频影片"] = [data]
-            elif suf in [".txt", ".word", ".rtf"]:  # 文档
+            elif suf in [".txt", ".docx", ".doc"]:  # 文档
                 try:
                     self.type_index["文本文档"].append(data)
                 except Exception:

@@ -7,7 +7,7 @@
 """
 from dataManager import DataManager
 from localFileFunc import get_sha1
-from windowLib import Form_Homepage, Form_addFile
+from windowLib import Form_Homepage, Form_addFile, Form_addFiles
 from PySide2.QtWidgets import QFileDialog, QMainWindow, QApplication, QTableWidgetItem
 from sys import argv, exit
 from os.path import split
@@ -59,6 +59,45 @@ def main():
         temp.show()
         return None  # 窗口绑定的函数无法返回值
 
+    def ChooseFiles():  # 窗口绑定的函数无法传入值
+        """
+        打开文件选择框，选择多个指定的文件作为项目添加。
+
+        :return: 不返回值。
+        """
+
+        def add():
+            """
+            将选中的文件添加到项目库中。
+
+            :return: 不返回值啦。
+            """
+            for i in range(num):
+                manager.add_project(temp.ui.tableWidget.item(i, 3).text(), temp.ui.tableWidget.item(i, 1).text().split(","))
+            temp.close()
+            return None
+
+        file_names = QFileDialog.getOpenFileNames(QMainWindow(), "选择需要添加索引的项目...")[0]
+        if not file_names:
+            return None  # 如果用户没有选择文件就直接关闭，直接退出此方法
+        temp = Form_addFiles()
+        temp.ui.pushButton_confirm.clicked.connect(add)  # 确认按钮绑定添加到项目库函数
+        temp.ui.pushButton_cancel.clicked.connect(temp.close)
+
+        # 循环所有选择的项目，将基本信息打印到表格内
+        num = 0
+        count = len(file_names)
+        temp.ui.tableWidget.setRowCount(count)  # 设置表格行数
+        for data in file_names:
+            name = split(data)[1]
+            temp.ui.tableWidget.setItem(num, 0, QTableWidgetItem(name))
+            temp.ui.tableWidget.setItem(num, 3, QTableWidgetItem(data))
+            sha1 = get_sha1(data)
+            temp.ui.tableWidget.setItem(num, 2, QTableWidgetItem(sha1))
+            num = num + 1
+        temp.show()
+        return None  # 窗口绑定的函数无法返回值
+
     def UpdateTable():
         """
         刷新列表（其实是表格）中的信息，每次更改变动项目库中的内容时都需要刷新。
@@ -94,6 +133,7 @@ def main():
 
     UpdateTable()  # 更新一次表格信息
     window.ui.pushButton_addFile.clicked.connect(ChooseFile)  # 绑定添加单个项目函数
+    window.ui.pushButton_addFiles.clicked.connect(ChooseFiles)  # 绑定添加多个项目函数
     window.ui.pushButton_Update.clicked.connect(UpdateTable)
     window.show()
     logger.info("FFM 进入逻辑循环，现在是您的主场。")
