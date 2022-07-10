@@ -3,7 +3,7 @@
 from json import loads, dumps
 from os import path
 from datetime import datetime
-from localFileFunc import if_file_or_dir_exists, get_sha1
+from localFileFunc import if_file_or_dir_exists, get_sha1, make_dirs_exist
 from TempConfing import data_files_json
 from Logging import logger
 
@@ -28,7 +28,10 @@ class DataManager:
 
         # 如果配置文件不存在则创建空文件
         if not if_file_or_dir_exists(data_files_json):
+            if not if_file_or_dir_exists(path.split(data_files_json)[0], False):
+                make_dirs_exist(path.split(data_files_json)[0])
             temp = open(file=data_files_json, mode="w", encoding="utf-8")
+            temp.write('{"description": "FanFilesManager", "data": []}')
             temp.close()
 
         # 读取配置文件内容
@@ -50,7 +53,7 @@ class DataManager:
         self.description: str = self.json_read["description"]
 
         if "data" not in self.json_read:
-            self.json_read["data"] = self.normal_data
+            self.json_read["data"] = [self.normal_data]
         self.data: list[dict[str or list]] = self.json_read["data"]
 
         # 排查格式有误的项目，并对格式正确的项目编制索引
@@ -61,7 +64,6 @@ class DataManager:
                 self.success_data_list.append(data)
 
         logger.debug("项目管理器：成功加载本地存储的项目数据。")
-
         self.make_index()
         self.save()  # 保存到文件
         return self
