@@ -4,6 +4,10 @@
 
 **[中文](Introduction_zh.md)**
 
+> The following words were translated by Bing.
+> 
+> So if you could, read Chinese, pleazzzzzzzzzzzz!
+
 ---
 
 ### What is this for?
